@@ -31,8 +31,9 @@ export class userformComponent implements OnChanges, OnInit, OnDestroy, DoCheck,
 
     ngAfterViewInit(): void {
         console.log(this.viewhild);
-        this.viewhild.name = "new child ff";
+        this.viewhild.name = "data changed from child component";
         console.log("Parent ngAfterViewInit");
+        this.cdref.detectChanges();
     }
 
     ngAfterViewChecked(): void {
