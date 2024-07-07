@@ -21,14 +21,14 @@ export class HelloComponent implements OnInit, OnDestroy, OnChanges {
 
     ngOnInit(): void {
         console.log('load');
-        // this.timeoutInstance = setInterval(() => {
-        //     console.log(new Date())
-        // }, 1000)
+        this.timeoutInstance = setInterval(() => {
+            console.log(new Date())
+        }, 1000)
     }
     ngOnDestroy(): void {
         console.log("Component destroyed");
-        // if(this.timeoutInstance) {
-        //     clearInterval(this.timeoutInstance);
-        // }
+        if(this.timeoutInstance) {
+            clearInterval(this.timeoutInstance);
+        }
     }
 }
