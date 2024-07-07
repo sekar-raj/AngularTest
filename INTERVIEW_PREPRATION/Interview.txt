@@ -1,0 +1,39 @@
+Interview preparation
+=========================
+
+AOT
+=====
+
+1. AOT - ahead of time compilation.
+2. AOT compilation is a process in which your angular application's code is compiled and optimized before it's delivered to the browser.
+3. During AOT compilation, Angular templated are also compiled ahead of time into Javascript code.
+
+Benefits of AOT:
+	1. Faster Load Time: AOT Compiled applications tend to load faster because the browser doesn't need to spend time to compiling templates.
+						Templated are already in the javascript form.
+	
+	2. Smaller bundle sizes: AOT eliminates the angular compiler and reduces the size of the final bundle, leading to smaller file sizes and improved 
+							Performance.
+	3. Template type checking: AOT includes enhanced template type checking, catching potential errors during compilation.
+	4. Better Security: Since templates are precompiled, there's a reduced risk of template-related security vulnerabilites.
+	
+JIT (Just-In-Time) Compilation:
+	1. JIT compilation is the process where your angular application's code is compiled in the browser in runtime, Just before it's executed.
+	2. During JIT Compilation, the angular templates are compiled in the browser, which can lead to slower initial loading time.
+	
+Benefits of JIT:
+
+1.Development Convenience: JIT compilation simplifies the development process, as you can make changes to your code and see them reflected immediately without
+							needing to recomplie.
+
+2. Dynamically Generated Templates: JIT allows the generation of dynamic templates, such as those created based on user input or data fetched from API's.
+3. Better for Rapid Prototyping: In development or rapid prototyping scenarios, JIT’s quicker turnaround time can be advantageous.
+
+-> AOT is often preferred for production environments because of its advantages in terms of load times, 
+bundle size, and template type checking. 
+-> It’s the default compilation mode for Angular applications.
+-> JIT, on the other hand, is useful during development due to its rapid iteration capabilities. 
+-> Developers can make code changes and immediately see the results without the need for a separate build step. 
+-> However, JIT-compiled applications might have slightly slower initial load times and larger bundle sizes compared to AOT-compiled applications.
+				
+What is Ivy in Angular ?
