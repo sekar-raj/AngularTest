@@ -7,6 +7,9 @@ import { HelloComponent } from './hello.component';
 import { FormsModule } from '@angular/forms';
 import { userformComponent } from './userform/userform.component';
 import { fieldComponent } from './field/field.component';
+import { AppService } from './app.service';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { CustomHttpInterceptor } from './http.intercepter';
 
 @NgModule({
   declarations: [
@@ -18,9 +21,10 @@ import { fieldComponent } from './field/field.component';
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [AppService, {provide: HTTP_INTERCEPTORS, useClass: CustomHttpInterceptor, multi:true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

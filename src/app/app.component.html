@@ -3,4 +3,14 @@
 <input type="text" [(ngModel)]="lastname" name="lastname" id="lastname">
 <button (click)="Toggle()">Toggle</button> -->
 
-<user-form></user-form>
+<!-- <user-form></user-form> -->
+
+<table>
+    <tbody>
+        <tr *ngFor="let user of users; let index = index">
+            <td>{{index + 1}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.email}}</td>
+        </tr>
+    </tbody>
+</table>
