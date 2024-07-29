@@ -10,13 +10,19 @@ import { fieldComponent } from './field/field.component';
 import { AppService } from './app.service';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { CustomHttpInterceptor } from './http.intercepter';
+import { HelloFormComponent } from './hello/hello.component';
+import { UsersComponent } from './users/users.component';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HelloComponent,
     userformComponent,
-    fieldComponent
+    fieldComponent,
+    HelloFormComponent,
+    UsersComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,

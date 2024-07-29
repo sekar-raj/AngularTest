@@ -5,7 +5,7 @@
 
 <!-- <user-form></user-form> -->
 
-<table>
+<!-- <table>
     <tbody>
         <tr *ngFor="let user of users; let index = index">
             <td>{{index + 1}}</td>
@@ -13,4 +13,11 @@
             <td>{{user.email}}</td>
         </tr>
     </tbody>
-</table>
+</table> -->
+
+<!-- <hello-form></hello-form> -->
+<h1>
+	My App
+</h1>
+<a routerLink="/users" routerLinkActive="badge-success" class="badge badge-primary mb-2">Go to users</a>
+<router-outlet></router-outlet>
