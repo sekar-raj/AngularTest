@@ -1,4 +1,5 @@
 <div class="mb-2">Users List - <a routerLink="['users', 'add']">Add new user</a> 
+	<a routerLink="./hellochild"> canchild</a>
     <a routerLink="./test">test</a></div>
 <div *ngFor="let user of appService.users" class="mb-2">
 	<div routerLink="/users/{{user.id}}">Name: {{user.name}}</div>

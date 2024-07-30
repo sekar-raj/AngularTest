@@ -14,7 +14,7 @@ export class HelloFormComponent {
 @Component({
     selector: 'hi-form',
     template: `Hi Component
-                `
+              `
   })
   export class HiComponent {
       constructor() {

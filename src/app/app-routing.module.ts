@@ -4,15 +4,17 @@ import { HelloFormComponent, HiComponent, TestComponent } from './hello/hello.co
 import { UsersComponent } from './users/users.component';
 import { UserComponent } from './user/user.component';
 import { TestCanActivate } from './canactivate';
+import { TestCanActivateChild } from './canactivateChild';
 
 const routes: Routes = [{
   path: 'users',
   component: UsersComponent,
-  canActivate: [TestCanActivate]
-  // children: [
-  //   {path: 'hellochild',
-  //   component: HiComponent}
-  // ]
+  children: [
+    {path: 'hellochild',
+    component: HiComponent}
+  ],
+  canActivate: [TestCanActivate],
+  canActivateChild: [TestCanActivateChild]
 }, 
 {
   path: 'users/add',
