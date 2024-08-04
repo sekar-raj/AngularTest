@@ -10,7 +10,7 @@ export class TestCanActivate implements CanActivate {
         return new Promise((reslove, reject) =>{
             setTimeout(() => {
                 reslove(true); 
-            }, 3000);
+            }, 1000);
         })
     }
 

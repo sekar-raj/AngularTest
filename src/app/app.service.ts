@@ -10,7 +10,10 @@ export class AppService {
     constructor(private http: HttpClient) {
 
     }
-
+    /**
+     * 
+     * @returns users type with array of object
+     */
     getAllUsers(): Observable<users[]> {
         return this.http.get<users[]>('users');
     }

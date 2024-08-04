@@ -6,13 +6,14 @@ import { fieldComponent } from '../field/field.component';
   templateUrl: './userform.component.html'
 })
 export class userformComponent implements OnChanges, OnInit, OnDestroy, DoCheck, AfterViewInit, AfterViewChecked{
-
+    name: string;
     constructor(private cdref: ChangeDetectorRef) {
         
     }
-
+    // Property decorator 
     @ViewChild(fieldComponent, {static: false}) viewhild!: fieldComponent;
 
+    // Life cycle hook start
     ngOnChanges(changes: SimpleChanges): void {
         console.log("Parent ngOnchanges");
     }
@@ -24,13 +25,9 @@ export class userformComponent implements OnChanges, OnInit, OnDestroy, DoCheck,
     ngDoCheck(): void {
         console.log("Parent ngDoCheck");
     }
-    
-    ngOnDestroy(): void {
-        console.log("Parent ngOnDestroy");
-    }
 
     ngAfterViewInit(): void {
-        console.log(this.viewhild);
+        // console.log(this.viewhild);
         this.viewhild.name = "data changed from child component";
         console.log("Parent ngAfterViewInit");
         this.cdref.detectChanges();
@@ -39,6 +36,11 @@ export class userformComponent implements OnChanges, OnInit, OnDestroy, DoCheck,
     ngAfterViewChecked(): void {
         console.log("Parent ngAfterViewChecked");
     }
+
+    ngOnDestroy(): void {
+        console.log("Parent ngOnDestroy");
+    }
+    // Life cycle hook end
     
     
 }

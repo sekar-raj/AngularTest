@@ -1,15 +1,15 @@
-import { AfterViewChecked, AfterViewInit, Component, DoCheck, OnChanges, OnDestroy, OnInit, SimpleChanges, ViewChild } from '@angular/core';
+import { AfterViewChecked, AfterViewInit, Component, DoCheck, Input, OnChanges, OnDestroy, OnInit, SimpleChanges, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'field-form',
   templateUrl: './field.component.html'
 })
 export class fieldComponent implements OnInit, OnChanges, OnDestroy, DoCheck, AfterViewInit, AfterViewChecked{
-    name = "test"
+    @Input() name: string;
     constructor() {
 
     }
-
+    // Life cycle hook start
     ngOnChanges(changes: SimpleChanges): void {
         console.log("Child ngOnchanges");
     }
@@ -32,4 +32,5 @@ export class fieldComponent implements OnInit, OnChanges, OnDestroy, DoCheck, Af
     ngAfterViewChecked(): void {
         console.log("Child ngAfterViewChecked");
     }
+    // Life cycle hook end
 }

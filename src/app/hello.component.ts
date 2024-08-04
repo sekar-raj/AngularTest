@@ -7,18 +7,17 @@ import { Component, Input, OnChanges, OnDestroy, OnInit, SimpleChanges } from "@
 })
 
 export class HelloComponent implements OnInit, OnDestroy, OnChanges {
-    @Input() name!: string;
+    // Input property from capture value from parent component using @Input decorators
+    @Input() name!: string; 
     @Input() lastname!:string;
     timeoutInstance: any;
 
+    constructor() {}
+
+    // Life cycle hook start
     ngOnChanges(changes: SimpleChanges): void {
         console.log(changes);
     }
-
-    constructor() {
-
-    }
-
     ngOnInit(): void {
         console.log('load');
         this.timeoutInstance = setInterval(() => {
@@ -31,4 +30,5 @@ export class HelloComponent implements OnInit, OnDestroy, OnChanges {
             clearInterval(this.timeoutInstance);
         }
     }
+    // Life cycle hook end
 }

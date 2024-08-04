@@ -42,9 +42,10 @@ export class AppComponent implements OnInit {
 
   }
   ngOnInit() {
+    //
     this.service.getAllUsers().subscribe((data: users[])=> {
       this.users = data;
-      console.log(this.users);
+      // console.log(this.users);
     });
     
   }

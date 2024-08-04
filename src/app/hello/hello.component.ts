@@ -2,8 +2,7 @@ import {Component } from '@angular/core';
 
 @Component({
   selector: 'hello-form',
-  template: `
-  <router-outlet></router-outlet>Hello Component`
+  template: `Hello Component`
 })
 export class HelloFormComponent {
     constructor() {
